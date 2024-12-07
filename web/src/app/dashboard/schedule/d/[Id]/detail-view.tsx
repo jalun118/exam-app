@@ -11,15 +11,17 @@ import CardDescriptionSchedule from "./card-detail-schedule";
 import CardInfoSchedule from "./card-info-schedule";
 import CardStudent from "./card-student";
 
-export default function DetailView({ id_schedule }: { id_schedule: string }) {
-  const [IsDelete, SetIsDelete] = useState(false);
+export default function DetailView({ id_schedule }: { id_schedule: string; }) {
+  const [modalType, SetModalType] = useState<"delete" | "reset" | null>(null);
+
   return (
     <div>
       <div className="grid grid-cols-1 gap-4 md:grid-cols-12">
         <CardDescriptionSchedule />
         <CardInfoSchedule
-          SetIsDelete={(v) => SetIsDelete(v)}
+          SetIsDelete={() => SetModalType("delete")}
           id_schedule={id_schedule}
+          SetIsReset={() => SetModalType("reset")}
           student_length={StudentWithScore.length}
         />
       </div>
@@ -32,8 +34,8 @@ export default function DetailView({ id_schedule }: { id_schedule: string }) {
         </div>
       </div>
       <Dialog
-        open={IsDelete}
-        onClose={() => SetIsDelete(false)}
+        open={modalType !== null}
+        onClose={() => SetModalType(null)}
         className="relative z-40"
       >
         <DialogBackdrop
@@ -51,15 +53,15 @@ export default function DetailView({ id_schedule }: { id_schedule: string }) {
                   as="h3"
                   className="truncate whitespace-nowrap text-xl font-medium text-black"
                 >
-                  Delete Schedule
+                  {modalType === "reset" ? "Reset Submit" : "Delete Schedule"}
                 </DialogTitle>
               </div>
-              <div className="mt-2 px-5 text-base">
+              <div className="mt-3 px-5 text-base">
                 <p className="mb-2">
-                  Are you really sure you want to delete schedule{" "}
+                  {modalType === "reset" ? "Are you really sure you want to reset submit" : "Are you really sure you want to delete schedule"}{" "}
                   <span className="font-semibold">ULANGAN MTK</span>?
                 </p>
-                <div className="my-2 flex items-center justify-between rounded-md border border-red-300 bg-red-100 px-3 py-2">
+                <div className="my-3 flex items-center justify-between rounded-md border border-red-300 bg-red-100 px-3 py-2">
                   <div className="text-red-600">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -103,16 +105,16 @@ export default function DetailView({ id_schedule }: { id_schedule: string }) {
                 </div>
                 <div className="mt-5 flex justify-end gap-x-2 text-sm">
                   <button
-                    onClick={() => SetIsDelete(false)}
+                    onClick={() => SetModalType(null)}
                     className="flex items-center rounded-md bg-gray-100 px-3 py-2 font-semibold text-black hover:bg-gray-200 active:bg-gray-300"
                   >
                     CANCEL
                   </button>
                   <button
-                    onClick={() => SetIsDelete(false)}
+                    onClick={() => SetModalType(null)}
                     className="flex items-center rounded-md bg-red-600 px-3 py-2 font-semibold text-white hover:bg-red-700 active:bg-red-800"
                   >
-                    DELETE
+                    {modalType === "reset" ? "RESET" : "DELETE"}
                   </button>
                 </div>
               </div>

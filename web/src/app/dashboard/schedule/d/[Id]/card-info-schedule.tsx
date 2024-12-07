@@ -5,10 +5,12 @@ export default function CardInfoSchedule({
   student_length,
   id_schedule,
   SetIsDelete,
+  SetIsReset
 }: {
   student_length: number;
   id_schedule: string;
   SetIsDelete: (val: boolean) => void;
+  SetIsReset: (val: boolean) => void;
 }) {
   return (
     <div className="col-span-6">
@@ -41,7 +43,7 @@ export default function CardInfoSchedule({
               <button
                 type="button"
                 onClick={() => SetIsDelete(true)}
-                className="ml-3 inline-flex items-center justify-center rounded-full px-2 py-1 outline-none ring-0 ring-gray-200 transition duration-75 ease-in-out active:bg-gray-200 active:ring-4"
+                className="mx-3 inline-flex items-center justify-center rounded-full px-2 py-1 outline-none ring-0 ring-gray-200 transition duration-75 ease-in-out active:bg-gray-200 active:ring-4"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -58,6 +60,18 @@ export default function CardInfoSchedule({
                   />
                 </svg>
                 <span className="ms-2">Delete</span>
+              </button>
+            </div>
+            <div>
+              <button
+                type="button"
+                onClick={() => SetIsReset(true)}
+                className="ml-3 inline-flex items-center justify-center rounded-full px-2 py-1 outline-none ring-0 ring-gray-200 transition duration-75 ease-in-out active:bg-gray-200 active:ring-4"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1} stroke="currentColor" className="size-6">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 15 3 9m0 0 6-6M3 9h12a6 6 0 0 1 0 12h-3" />
+                </svg>
+                <span className="ms-2">Reset Submit</span>
               </button>
             </div>
           </div>
