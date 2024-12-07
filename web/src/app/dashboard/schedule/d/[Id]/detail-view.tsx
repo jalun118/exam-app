@@ -11,7 +11,7 @@ import CardDescriptionSchedule from "./card-detail-schedule";
 import CardInfoSchedule from "./card-info-schedule";
 import CardStudent from "./card-student";
 
-export default function DetailView({ id_schedule }: { id_schedule: string; }) {
+export default function DetailView({ id_schedule }: { id_schedule: string }) {
   const [modalType, SetModalType] = useState<"delete" | "reset" | null>(null);
 
   return (
@@ -58,7 +58,9 @@ export default function DetailView({ id_schedule }: { id_schedule: string; }) {
               </div>
               <div className="mt-3 px-5 text-base">
                 <p className="mb-2">
-                  {modalType === "reset" ? "Are you really sure you want to reset submit" : "Are you really sure you want to delete schedule"}{" "}
+                  {modalType === "reset"
+                    ? "Are you really sure you want to reset submit"
+                    : "Are you really sure you want to delete schedule"}{" "}
                   <span className="font-semibold">ULANGAN MTK</span>?
                 </p>
                 <div className="my-3 flex items-center justify-between rounded-md border border-red-300 bg-red-100 px-3 py-2">
