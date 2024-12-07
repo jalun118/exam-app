@@ -95,7 +95,7 @@ export default function SideBar({ logo }: { logo?: ReactNode }) {
               <NavLink
                 className="flex w-full items-center gap-x-3.5 rounded-lg px-4 py-2.5 text-sm text-gray-800 hover:bg-gray-100 dark:text-neutral-200 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 md:text-base"
                 isActiveClassName="flex items-center gap-x-3.5 rounded-lg bg-gray-100 px-4 py-2.5 text-sm text-gray-800 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none dark:bg-neutral-700 dark:text-white md:text-base"
-                href="#"
+                href={prefix("/student")}
               >
                 <svg
                   className="size-5 shrink-0"
