@@ -1,0 +1,24 @@
+# Binarie
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Binary Test
+*.test
+
+*.out
+
+# Dependency
+vendor/
+
+# Go Work Space
+go.work
+
+# enviroment
+.env*
+!.env.example
+
+# Testing
+test.rest
