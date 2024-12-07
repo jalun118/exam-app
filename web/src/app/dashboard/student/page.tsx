@@ -123,7 +123,6 @@ export default function StudentPage() {
         </div>
       </div>
       <div className="mt-3">
-
         <div className="flex flex-col">
           <div className="-m-1.5 overflow-x-auto">
             <div className="inline-block min-w-full p-1.5 align-middle">
@@ -133,7 +132,7 @@ export default function StudentPage() {
                     <tr>
                       <th
                         scope="col"
-                        className="pl-3 py-3 text-start text-xs font-medium uppercase text-gray-500 md:px-4 md:text-sm"
+                        className="py-3 pl-3 text-start text-xs font-medium uppercase text-gray-500 md:px-4 md:text-sm"
                       >
                         #
                       </th>
@@ -172,24 +171,17 @@ export default function StudentPage() {
                   <tbody className="divide-y divide-gray-400">
                     {ListStudents.slice(0, 5).map((student) => (
                       <tr key={student.id}>
-                        <td className="max-w-48 whitespace-nowrap pl-3 py-2.5 text-sm font-medium text-gray-800 md:px-4 md:text-base">
+                        <td className="max-w-48 whitespace-nowrap py-2.5 pl-3 text-sm font-medium text-gray-800 md:px-4 md:text-base">
                           <div className="flex items-center">
                             <input
                               type="checkbox"
-                              id={
-                                "checkbox-" +
-                                student.id
-                              }
+                              id={"checkbox-" + student.id}
                               className="size-5 shrink-0 rounded border-gray-400 text-blue-600 focus:ring-blue-500 disabled:pointer-events-none disabled:opacity-50"
                             />
                             <label
-                              htmlFor={
-                                "checkbox-" +
-                                student.id
-                              }
+                              htmlFor={"checkbox-" + student.id}
                               className="ms-3 text-gray-900 dark:text-gray-300"
-                            >
-                            </label>
+                            ></label>
                           </div>
                         </td>
                         <td className="whitespace-nowrap px-3 py-2.5 text-sm text-gray-800 md:px-4 md:text-base">
@@ -204,7 +196,7 @@ export default function StudentPage() {
                         <td className="whitespace-nowrap px-3 py-2.5 text-sm text-gray-800 md:px-4 md:text-base">
                           {student.student_class}
                         </td>
-                        <td className="flex gap-x-1 whitespace-nowrap px-2 py-2.5 text-end text-sm font-medium md:px-2 md:text-base justify-end">
+                        <td className="flex justify-end gap-x-1 whitespace-nowrap px-2 py-2.5 text-end text-sm font-medium md:px-2 md:text-base">
                           <button className="inline-flex items-center justify-center rounded-full p-1 outline-none ring-0 ring-gray-200 transition duration-75 ease-in-out active:bg-gray-200 active:ring-4">
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
@@ -272,38 +264,107 @@ export default function StudentPage() {
             </div>
           </div>
 
-          <div className="border-y border-y-gray-400 mt-3 py-3 px-5">
-            <div className="grid justify-center sm:flex sm:justify-end sm:items-center gap-2">
-              <div className="flex justify-center items-center gap-x-3">
-                <div className="text-sm">
-                  Rows per page: 
-                </div>
-                <button type="button" className="py-1.5 px-2.5 inline-flex items-center gap-x-1 text-sm rounded-lg border border-gray-200 text-gray-800 shadow-sm hover:bg-gray-50 focus:outline-none focus:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-700 dark:focus:bg-neutral-700" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
+          <div className="mt-3 border-y border-y-gray-400 px-5 py-3">
+            <div className="grid justify-center gap-2 sm:flex sm:items-center sm:justify-end">
+              <div className="flex items-center justify-center gap-x-3">
+                <div className="text-sm">Rows per page:</div>
+                <button
+                  type="button"
+                  className="inline-flex items-center gap-x-1 rounded-lg border border-gray-200 px-2.5 py-1.5 text-sm text-gray-800 shadow-sm hover:bg-gray-50 focus:bg-gray-100 focus:outline-none disabled:pointer-events-none disabled:opacity-50 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-700 dark:focus:bg-neutral-700"
+                  aria-haspopup="menu"
+                  aria-expanded="false"
+                  aria-label="Dropdown"
+                >
                   5 page
-                  <svg className="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <svg
+                    className="size-4 shrink-0"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
                     <path d="m6 9 6 6 6-6"></path>
                   </svg>
                 </button>
               </div>
-              <div className="flex items-center mx-3 text-sm">
+              <div className="mx-3 flex items-center text-sm">
                 <span>1 - 4 of 10</span>
               </div>
-              <nav className="flex items-center gap-x-1" aria-label="Pagination">
-                <button type="button" className="min-h-[38px] min-w-[38px] py-2 px-2.5 inline-flex justify-center items-center gap-x-2 text-sm rounded-lg border border-transparent text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:border-transparent dark:text-white dark:hover:bg-white/10 dark:focus:bg-white/10" aria-label="Previous">
-                  <svg className="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <nav
+                className="flex items-center gap-x-1"
+                aria-label="Pagination"
+              >
+                <button
+                  type="button"
+                  className="inline-flex min-h-[38px] min-w-[38px] items-center justify-center gap-x-2 rounded-lg border border-transparent px-2.5 py-2 text-sm text-gray-800 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none disabled:pointer-events-none disabled:opacity-50 dark:border-transparent dark:text-white dark:hover:bg-white/10 dark:focus:bg-white/10"
+                  aria-label="Previous"
+                >
+                  <svg
+                    className="size-3.5 shrink-0"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
                     <path d="m15 18-6-6 6-6"></path>
                   </svg>
                   <span className="sr-only">Previous</span>
                 </button>
                 <div className="flex items-center gap-x-1">
-                  <button type="button" className="min-h-[38px] min-w-[38px] flex justify-center items-center border border-gray-200 text-gray-800 py-2 px-3 text-sm rounded-lg focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:border-neutral-700 dark:text-white dark:focus:bg-white/10" aria-current="page">1</button>
-                  <button type="button" className="min-h-[38px] min-w-[38px] flex justify-center items-center border border-transparent text-gray-800 hover:bg-gray-100 py-2 px-3 text-sm rounded-lg focus:outline-none focus:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:border-transparent dark:text-white dark:hover:bg-white/10 dark:focus:bg-white/10">2</button>
-                  <button type="button" className="min-h-[38px] min-w-[38px] flex justify-center items-center border border-transparent text-gray-800 hover:bg-gray-100 py-2 px-3 text-sm rounded-lg focus:outline-none focus:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:border-transparent dark:text-white dark:hover:bg-white/10 dark:focus:bg-white/10">3</button>
-                  <button type="button" className="min-h-[38px] min-w-[38px] flex justify-center items-center border border-transparent text-gray-800 hover:bg-gray-100 py-2 px-3 text-sm rounded-lg focus:outline-none focus:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:border-transparent dark:text-white dark:hover:bg-white/10 dark:focus:bg-white/10">8</button>
+                  <button
+                    type="button"
+                    className="flex min-h-[38px] min-w-[38px] items-center justify-center rounded-lg border border-gray-200 px-3 py-2 text-sm text-gray-800 focus:bg-gray-50 focus:outline-none disabled:pointer-events-none disabled:opacity-50 dark:border-neutral-700 dark:text-white dark:focus:bg-white/10"
+                    aria-current="page"
+                  >
+                    1
+                  </button>
+                  <button
+                    type="button"
+                    className="flex min-h-[38px] min-w-[38px] items-center justify-center rounded-lg border border-transparent px-3 py-2 text-sm text-gray-800 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none disabled:pointer-events-none disabled:opacity-50 dark:border-transparent dark:text-white dark:hover:bg-white/10 dark:focus:bg-white/10"
+                  >
+                    2
+                  </button>
+                  <button
+                    type="button"
+                    className="flex min-h-[38px] min-w-[38px] items-center justify-center rounded-lg border border-transparent px-3 py-2 text-sm text-gray-800 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none disabled:pointer-events-none disabled:opacity-50 dark:border-transparent dark:text-white dark:hover:bg-white/10 dark:focus:bg-white/10"
+                  >
+                    3
+                  </button>
+                  <button
+                    type="button"
+                    className="flex min-h-[38px] min-w-[38px] items-center justify-center rounded-lg border border-transparent px-3 py-2 text-sm text-gray-800 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none disabled:pointer-events-none disabled:opacity-50 dark:border-transparent dark:text-white dark:hover:bg-white/10 dark:focus:bg-white/10"
+                  >
+                    8
+                  </button>
                 </div>
-                <button type="button" className="min-h-[38px] min-w-[38px] py-2 px-2.5 inline-flex justify-center items-center gap-x-2 text-sm rounded-lg border border-transparent text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:border-transparent dark:text-white dark:hover:bg-white/10 dark:focus:bg-white/10" aria-label="Next">
+                <button
+                  type="button"
+                  className="inline-flex min-h-[38px] min-w-[38px] items-center justify-center gap-x-2 rounded-lg border border-transparent px-2.5 py-2 text-sm text-gray-800 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none disabled:pointer-events-none disabled:opacity-50 dark:border-transparent dark:text-white dark:hover:bg-white/10 dark:focus:bg-white/10"
+                  aria-label="Next"
+                >
                   <span className="sr-only">Next</span>
-                  <svg className="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <svg
+                    className="size-3.5 shrink-0"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
                     <path d="m9 18 6-6-6-6"></path>
                   </svg>
                 </button>
