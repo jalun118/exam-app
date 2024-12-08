@@ -1,5 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit";
 import createQuestionSlice from "./features/dashboard/createQuetionSlice";
+import studentSlice from "./features/dashboard/studentSlice";
 import examSlice from "./features/exam/examSlice";
 import questionSlice from "./features/exam/questionSlice";
 import userAnswersSlice from "./features/exam/userAnswersSlice";
@@ -14,6 +15,7 @@ export const makeStore = () => {
       exam: examSlice,
       question: questionSlice,
       user_answers: userAnswersSlice,
+      student: studentSlice,
       create_question: createQuestionSlice,
     },
   });

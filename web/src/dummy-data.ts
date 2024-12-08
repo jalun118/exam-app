@@ -649,147 +649,179 @@ export interface iListStudent {
   username: string;
   password: string;
   student_class: string;
+  sequence: number;
 }
 
 export const ListStudents: iListStudent[] = [
   {
-    id: "1f54387d-f76b-4519-91c3-ba83c8a74b87",
-    student_name: "Nixon Mccormick Mcgee",
-    username: "886_Rowe",
-    password: "!minim28652",
-    student_class: "11 FA",
+    id: '1f54387d-f76b-4519-91c3-ba83c8a74b87',
+    student_name: 'Nixon Mccormick Mcgee',
+    username: '886_Rowe',
+    password: '!minim28652',
+    student_class: '11 FA',
+    sequence: 1
   },
   {
-    id: "720831c7-378f-4146-9fe8-e6607ada6f5b",
-    student_name: "Lynn Crane Rivers",
-    username: "276_Hillary",
-    password: "!adipisicing39248",
-    student_class: "11 FA",
+    id: '720831c7-378f-4146-9fe8-e6607ada6f5b',
+    student_name: 'Lynn Crane Rivers',
+    username: '276_Hillary',
+    password: '!adipisicing39248',
+    student_class: '11 FA',
+    sequence: 2
   },
   {
-    id: "e665b4e1-9a5b-417e-85be-994a217f3361",
-    student_name: "Deana Chapman Galloway",
-    username: "591_Marshall",
-    password: "#id15602",
-    student_class: "11 FA",
+    id: 'e665b4e1-9a5b-417e-85be-994a217f3361',
+    student_name: 'Deana Chapman Galloway',
+    username: '591_Marshall',
+    password: '#id15602',
+    student_class: '11 FA',
+    sequence: 3
   },
   {
-    id: "9a274184-adc4-40ce-8467-d83c5c3dc5e4",
-    student_name: "Nora Carlson Patterson",
-    username: "952_Valenzuela",
-    password: "#aute32575",
-    student_class: "11 FA",
+    id: '9a274184-adc4-40ce-8467-d83c5c3dc5e4',
+    student_name: 'Nora Carlson Patterson',
+    username: '952_Valenzuela',
+    password: '#aute32575',
+    student_class: '11 FA',
+    sequence: 4
   },
   {
-    id: "05da7dfd-eced-47b5-af75-cad01eaae19c",
-    student_name: "Bowers Parks Keith",
-    username: "439_Mullen",
-    password: "%amet45920",
-    student_class: "11 FA",
+    id: '05da7dfd-eced-47b5-af75-cad01eaae19c',
+    student_name: 'Bowers Parks Keith',
+    username: '439_Mullen',
+    password: '%amet45920',
+    student_class: '11 FA',
+    sequence: 5
   },
   {
-    id: "5847f12f-67b3-4b44-be62-ebdd59a8e47b",
-    student_name: "Leonard Odonnell Hopkins",
-    username: "396_Rosa",
-    password: "$enim70110",
-    student_class: "11 FA",
+    id: '5847f12f-67b3-4b44-be62-ebdd59a8e47b',
+    student_name: 'Leonard Odonnell Hopkins',
+    username: '396_Rosa',
+    password: '$enim70110',
+    student_class: '11 FA',
+    sequence: 6
   },
   {
-    id: "890481e7-9d90-44bb-b1af-3d08df512a1e",
-    student_name: "Wolfe Sloan Keller",
-    username: "809_Workman",
-    password: "$eu27436",
-    student_class: "11 FA",
+    id: '890481e7-9d90-44bb-b1af-3d08df512a1e',
+    student_name: 'Wolfe Sloan Keller',
+    username: '809_Workman',
+    password: '$eu27436',
+    student_class: '11 FA',
+    sequence: 7
   },
   {
-    id: "bbadfb74-b84f-44ca-ae30-4b89f2e3cb57",
-    student_name: "Lara Blake Stafford",
-    username: "274_Meyers",
-    password: "#officia63490",
-    student_class: "11 FA",
+    id: 'bbadfb74-b84f-44ca-ae30-4b89f2e3cb57',
+    student_name: 'Lara Blake Stafford',
+    username: '274_Meyers',
+    password: '#officia63490',
+    student_class: '11 FA',
+    sequence: 8
   },
   {
-    id: "521bef07-faaf-4d65-92d4-e69aa6b83932",
-    student_name: "Blanchard Neal Rush",
-    username: "179_Wilkins",
-    password: "$occaecat80452",
-    student_class: "11 FA",
+    id: '521bef07-faaf-4d65-92d4-e69aa6b83932',
+    student_name: 'Blanchard Neal Rush',
+    username: '179_Wilkins',
+    password: '$occaecat80452',
+    student_class: '11 FA',
+    sequence: 9
   },
   {
-    id: "da96e1d2-11d4-4ef0-b507-60240445f03c",
-    student_name: "Tillman Strong Garner",
-    username: "280_Clara",
-    password: "$nisi77957",
-    student_class: "11 FA",
+    id: 'da96e1d2-11d4-4ef0-b507-60240445f03c',
+    student_name: 'Tillman Strong Garner',
+    username: '280_Clara',
+    password: '$nisi77957',
+    student_class: '11 FA',
+    sequence: 10
   },
   {
-    id: "77b04459-1402-479a-b23f-b059509c1c61",
-    student_name: "Tamara Pacheco Walton",
-    username: "667_Velma",
-    password: "/ut64391",
-    student_class: "11 FA",
+    id: '77b04459-1402-479a-b23f-b059509c1c61',
+    student_name: 'Tamara Pacheco Walton',
+    username: '667_Velma',
+    password: '/ut64391',
+    student_class: '11 FA',
+    sequence: 11
   },
   {
-    id: "1aa82310-6f05-4a81-bc43-54adcc95aab5",
-    student_name: "Ray Cole Holman",
-    username: "645_Coleen",
-    password: "/elit58011",
-    student_class: "11 FA",
+    id: '1aa82310-6f05-4a81-bc43-54adcc95aab5',
+    student_name: 'Ray Cole Holman',
+    username: '645_Coleen',
+    password: '/elit58011',
+    student_class: '11 FA',
+    sequence: 12
   },
   {
-    id: "b7e58e8e-cdd1-44c9-98f6-b114edcd1a01",
-    student_name: "Mcintosh Solis Bartlett",
-    username: "870_Alta",
-    password: "~est73102",
-    student_class: "11 FA",
+    id: 'b7e58e8e-cdd1-44c9-98f6-b114edcd1a01',
+    student_name: 'Mcintosh Solis Bartlett',
+    username: '870_Alta',
+    password: '~est73102',
+    student_class: '11 FA',
+    sequence: 13
   },
   {
-    id: "e2f230c4-111e-4646-8ba2-c593fc0676aa",
-    student_name: "Byrd May Casey",
-    username: "265_Moss",
-    password: "~in85060",
-    student_class: "11 FA",
+    id: 'e2f230c4-111e-4646-8ba2-c593fc0676aa',
+    student_name: 'Byrd May Casey',
+    username: '265_Moss',
+    password: '~in85060',
+    student_class: '11 FA',
+    sequence: 14
   },
   {
-    id: "89d148a2-eb10-4e08-9644-a089310bcb56",
-    student_name: "Dean Lewis Owen",
-    username: "127_Maritza",
-    password: "#id14044",
-    student_class: "11 FA",
+    id: '89d148a2-eb10-4e08-9644-a089310bcb56',
+    student_name: 'Dean Lewis Owen',
+    username: '127_Maritza',
+    password: '#id14044',
+    student_class: '11 FA',
+    sequence: 15
   },
   {
-    id: "f02a9e2f-6dcc-4519-ab5a-10d8b5afb655",
-    student_name: "Lisa Cross Salazar",
-    username: "328_Sykes",
-    password: "#sunt54707",
-    student_class: "11 FA",
+    id: 'f02a9e2f-6dcc-4519-ab5a-10d8b5afb655',
+    student_name: 'Lisa Cross Salazar',
+    username: '328_Sykes',
+    password: '#sunt54707',
+    student_class: '11 FA',
+    sequence: 16
   },
   {
-    id: "93499deb-dec5-4345-ad9a-9b1f120fcaad",
-    student_name: "Rivers Clayton Lawrence",
-    username: "857_Farrell",
-    password: "!id88485",
-    student_class: "11 FA",
+    id: '93499deb-dec5-4345-ad9a-9b1f120fcaad',
+    student_name: 'Rivers Clayton Lawrence',
+    username: '857_Farrell',
+    password: '!id88485',
+    student_class: '11 FA',
+    sequence: 17
   },
   {
-    id: "ea931fa9-b812-4c85-90c4-243d65b6ad73",
-    student_name: "Goldie Newton Chang",
-    username: "384_Manuela",
-    password: "/reprehenderit37976",
-    student_class: "11 FA",
+    id: 'ea931fa9-b812-4c85-90c4-243d65b6ad73',
+    student_name: 'Goldie Newton Chang',
+    username: '384_Manuela',
+    password: '/reprehenderit37976',
+    student_class: '11 FA',
+    sequence: 18
   },
   {
-    id: "70a103d6-eedc-42f6-aff9-e035840312eb",
-    student_name: "Benton Russo Landry",
-    username: "484_Mavis",
-    password: "%eiusmod37730",
-    student_class: "11 FA",
+    id: '70a103d6-eedc-42f6-aff9-e035840312eb',
+    student_name: 'Benton Russo Landry',
+    username: '484_Mavis',
+    password: '%eiusmod37730',
+    student_class: '11 FA',
+    sequence: 19
   },
   {
-    id: "cc3126a3-fa21-47f4-9437-9a3756e73e9a",
-    student_name: "Frieda Harrington Steele",
-    username: "681_Paula",
-    password: "~eu30669",
-    student_class: "11 FA",
+    id: 'cc3126a3-fa21-47f4-9437-9a3756e73e9a',
+    student_name: 'Frieda Harrington Steele',
+    username: '681_Paula',
+    password: '~eu30669',
+    student_class: '11 FA',
+    sequence: 20
+  }
+];
+
+export const ModeMoveStudent = [
+  {
+    label: "Replace",
+    value: "replace"
   },
+  {
+    label: "Double",
+    value: "double"
+  }
 ];
