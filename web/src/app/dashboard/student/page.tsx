@@ -1,3 +1,4 @@
+import { PrefixDashboard } from "@/lib/features/dashboard/prefix-instance-dashboard";
 import Link from "next/link";
 import ButtonDeleteMany from "./button-delete-many";
 import ButtonMoveStudent from "./button-move-student";
@@ -103,7 +104,7 @@ export default function StudentPage() {
         </div>
         <div className="flex justify-between gap-x-1 md:flex-row-reverse">
           <Link
-            href="#"
+            href={PrefixDashboard("/student/add")}
             className="flex items-center gap-x-2 rounded-lg border border-transparent bg-blue-600 px-2 py-1.5 text-sm font-medium text-white hover:bg-blue-700 focus:bg-blue-700 focus:outline-none disabled:pointer-events-none disabled:opacity-50"
           >
             <svg
