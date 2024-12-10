@@ -8,6 +8,14 @@ type tModalStudentInfo = {
   id: string;
 };
 
+export interface iStudent {
+  name: string;
+  class_room: string;
+  username: string;
+  sequence: number;
+  password: string;
+}
+
 interface iStudentSlice {
   student_select: string[];
   modal_student: {
@@ -15,6 +23,7 @@ interface iStudentSlice {
     type_modal: tModal;
     student_info: tModalStudentInfo | null;
   };
+  list_new_student: iStudent[];
 }
 
 const initialState: iStudentSlice = {
@@ -24,6 +33,7 @@ const initialState: iStudentSlice = {
     type_modal: "delete",
     student_info: null,
   },
+  list_new_student: [],
 };
 
 export const studentSlice = createSlice({
@@ -74,6 +84,21 @@ export const studentSlice = createSlice({
       state.modal_student.type_modal = "delete";
       state.modal_student.student_info = null;
     },
+    AddSingleStudent: (state, action: PayloadAction<iStudent>) => {
+      state.list_new_student.push(action.payload);
+    },
+    AddMultiStudent: (state, action: PayloadAction<iStudent[]>) => {
+      state.list_new_student = [...state.list_new_student, ...action.payload];
+    },
+    ReplaceStudentByIndex: (
+      state,
+      action: PayloadAction<{ index: number; student: iStudent }>,
+    ) => {
+      state.list_new_student[action.payload.index] = action.payload.student;
+    },
+    RemoveStudentByIndex: (state, action: PayloadAction<number>) => {
+      state.list_new_student.splice(action.payload, 1);
+    },
   },
 });
 
@@ -83,6 +108,10 @@ export const {
   ToggleSelectStudent,
   CloseModalStudent,
   SetOpenModalStudent,
+  AddMultiStudent,
+  AddSingleStudent,
+  RemoveStudentByIndex,
+  ReplaceStudentByIndex,
 } = studentSlice.actions;
 
 export default studentSlice.reducer;
