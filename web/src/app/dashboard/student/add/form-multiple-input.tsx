@@ -9,7 +9,7 @@ import { useState } from "react";
 // Example Multiple data
 //
 // | sequence | name         | username     | password | class name |
-// | ======== | ============ | ============ | ======== | ========== |
+// | -------- | ------------ | ------------ | -------- | ---------- |
 // | 1        | jenny sunda  | jenny_sun123 | jenny124 | 11 FA      |
 // | 2        | kuda jemping | kuda_jmpi212 | kuda1489 | 11 FA      |
 //
