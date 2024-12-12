@@ -15,7 +15,6 @@ import { ReactNode, useEffect, useState } from "react";
 
 export default function DashboardLayout({ children }: { children: ReactNode }) {
   const [openSideBar, SetOpenSidebar] = useState<boolean>(false);
-
   const pathname = usePathname();
 
   useEffect(() => {
