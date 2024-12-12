@@ -12,7 +12,7 @@ function BreadcrumbFormat(pageNameUrl: string): string {
 export default function Breadcrumb() {
   const pathUrl = usePathname().split("/");
 
-  if (pathUrl.length === 2) {
+  if (pathUrl.length === 2 || pathUrl.length === 3) {
     return (
       <div className="z-20 border-y border-gray-400 bg-white px-4 sm:px-6 lg:hidden lg:px-8">
         <div className="flex items-center py-2">
@@ -36,7 +36,7 @@ export default function Breadcrumb() {
               </svg>
             </li>
             <li
-              className="truncate text-sm font-semibold text-gray-800 dark:text-neutral-400 md:text-base"
+              className="max-w-36 truncate text-sm font-semibold text-gray-800 dark:text-neutral-400 md:text-base"
               aria-current="page"
             >
               {BreadcrumbFormat(pathUrl[pathUrl.length - 1])}
@@ -47,7 +47,7 @@ export default function Breadcrumb() {
     );
   }
 
-  if (pathUrl.length === 3) {
+  if (pathUrl.length === 4) {
     return (
       <div className="z-20 border-y border-gray-400 bg-white px-4 sm:px-6 lg:hidden lg:px-8">
         <div className="flex items-center py-2">
@@ -70,8 +70,28 @@ export default function Breadcrumb() {
                 />
               </svg>
             </li>
+            <li className="flex items-center text-sm text-gray-800 dark:text-neutral-400 md:text-base">
+              <span className="max-w-36 truncate">
+                {BreadcrumbFormat(pathUrl[pathUrl.length - 2])}
+              </span>
+              <svg
+                className="mx-3 size-2.5 shrink-0 overflow-visible text-gray-400 dark:text-neutral-500"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M5 1L10.6869 7.16086C10.8637 7.35239 10.8637 7.64761 10.6869 7.83914L5 14"
+                  stroke="currentColor"
+                  strokeWidth={1.5}
+                  strokeLinecap="round"
+                />
+              </svg>
+            </li>
             <li
-              className="truncate text-sm font-semibold text-gray-800 dark:text-neutral-400 md:text-base"
+              className="max-w-36 truncate text-sm font-semibold text-gray-800 dark:text-neutral-400 md:text-base"
               aria-current="page"
             >
               {BreadcrumbFormat(pathUrl[pathUrl.length - 1])}
@@ -139,7 +159,9 @@ export default function Breadcrumb() {
             </div>
           </li>
           <li className="flex items-center text-sm text-gray-800 dark:text-neutral-400 md:text-base">
-            {BreadcrumbFormat(pathUrl[pathUrl.length - 2])}
+            <span className="max-w-36 truncate">
+              {BreadcrumbFormat(pathUrl[pathUrl.length - 2])}
+            </span>
             <svg
               className="mx-3 size-2.5 shrink-0 overflow-visible text-gray-400 dark:text-neutral-500"
               width="16"
@@ -157,7 +179,7 @@ export default function Breadcrumb() {
             </svg>
           </li>
           <li
-            className="truncate text-sm font-semibold text-gray-800 dark:text-neutral-400 md:text-base"
+            className="max-w-36 truncate text-sm font-semibold text-gray-800 dark:text-neutral-400 md:text-base"
             aria-current="page"
           >
             {BreadcrumbFormat(pathUrl[pathUrl.length - 1])}
