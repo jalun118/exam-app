@@ -89,7 +89,10 @@ export default function TableSchedule({
                   </td>
                   <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-800 md:px-4 md:text-base">
                     {GetBadgeStatus(
-                      CheckStatusSchedule(schedule.date_start, schedule.date_end),
+                      CheckStatusSchedule(
+                        schedule.date_start,
+                        schedule.date_end,
+                      ),
                     )}
                   </td>
                   <td className="whitespace-nowrap px-3 py-4 text-sm tabular-nums text-gray-800 md:px-4 md:text-base">
