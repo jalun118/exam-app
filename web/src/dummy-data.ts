@@ -1,23 +1,4 @@
-export type tAnswerOption = {
-  index_option: number;
-  option: string;
-};
-
-export type tQuestion = {
-  question: string;
-  index_question: number;
-  answer_options: tAnswerOption[];
-};
-
-export type ExamData = {
-  exam_title: string;
-  count_down_exit: number;
-  duration_exam: number;
-  exam_subject: string;
-  quetions: tQuestion[];
-  exam_id: string;
-  start_test: string;
-};
+import { ExamData, iPackageQuestion, iSchedule } from "./utils/type-define";
 
 export const examDataExample: ExamData = {
   exam_id: "UHRO4U1qVphZTot6EJ9I",
@@ -248,14 +229,6 @@ export const examDataExample: ExamData = {
     },
   ],
 };
-
-export interface iPackageQuestion {
-  id: string;
-  title: string;
-  author: string;
-  number_question: number;
-  created_at: string;
-}
 
 export const listAllPackageQuestion: iPackageQuestion[] = [
   {
@@ -823,5 +796,32 @@ export const ModeMoveStudent = [
   {
     label: "Double",
     value: "double",
+  },
+];
+
+export const dataListSchedule: iSchedule[] = [
+  {
+    id: "75fe2a78-adcb-4ed0-9aea-23fc2f85ec2b",
+    name: "cupidatat tempor sint nisi",
+    date_start: "2016-12-05T06:00:59",
+    date_end: "2021-09-28T07:19:56",
+    duration: 46,
+    room: "room-01",
+  },
+  {
+    id: "b7c12a37-cc3f-439b-a5a8-92906387efa2",
+    name: "id veniam laboris velit",
+    date_start: "2024-11-07T20:00:00",
+    date_end: "2024-12-26T02:52:22",
+    duration: 80,
+    room: "exprerimental",
+  },
+  {
+    id: "961e3337-3120-4e96-b6fa-df9ce1a8909c",
+    name: "non aute est laboris",
+    date_start: "2025-08-13T11:37:25",
+    date_end: "2026-01-05T09:13:49",
+    duration: 103,
+    room: "room-03",
   },
 ];
