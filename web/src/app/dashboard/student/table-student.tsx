@@ -1,10 +1,12 @@
 "use client";
 import { ListStudents } from "@/dummy-data";
+import { PrefixDashboard } from "@/lib/features/dashboard/prefix-instance-dashboard";
 import {
   SetOpenModalStudent,
   ToggleSelectStudent,
 } from "@/lib/features/dashboard/studentSlice";
 import { useAppDispatch, useAppSelector } from "@/lib/hooks";
+import Link from "next/link";
 
 export default function TableStudent() {
   const student_select = useAppSelector(
@@ -118,7 +120,10 @@ export default function TableStudent() {
                         />
                       </svg>
                     </button>
-                    <button className="inline-flex items-center justify-center rounded-full p-1 outline-none ring-0 ring-gray-200 transition duration-75 ease-in-out active:bg-gray-200 active:ring-4">
+                    <Link
+                      href={PrefixDashboard("/student/" + student.id + "/edit")}
+                      className="inline-flex items-center justify-center rounded-full p-1 outline-none ring-0 ring-gray-200 transition duration-75 ease-in-out active:bg-gray-200 active:ring-4"
+                    >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
@@ -134,7 +139,7 @@ export default function TableStudent() {
                         />
                       </svg>
                       <span className="sr-only">Edit Button</span>
-                    </button>
+                    </Link>
                     <button
                       type="button"
                       onClick={() =>
