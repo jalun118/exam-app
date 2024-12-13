@@ -72,8 +72,6 @@ export default function FormMultipleInput() {
     });
 
     if (!isError) {
-      console.log(isError);
-
       dispatch(AddMultiStudent(tempData));
       SetTextData("");
     }
