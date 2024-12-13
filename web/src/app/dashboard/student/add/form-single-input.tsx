@@ -40,14 +40,6 @@ export default function FormSingleInput({
     dispacth(AddSingleStudent(data));
   }
 
-  const initValueFormEdit = {
-    sequence: getEditStudent?.student?.sequence ?? 0,
-    name: getEditStudent?.student?.name ?? "",
-    username: getEditStudent?.student?.username ?? "",
-    password: getEditStudent?.student?.password ?? "",
-    class_room: getEditStudent?.student?.class_room ?? "",
-  };
-
   const initValueForm = {
     sequence: 0,
     name: "",
@@ -75,9 +67,15 @@ export default function FormSingleInput({
 
   useEffect(() => {
     if (getEditStudent !== null) {
-      setValues(initValueFormEdit);
+      setValues({
+        sequence: getEditStudent?.student?.sequence ?? 0,
+        name: getEditStudent?.student?.name ?? "",
+        username: getEditStudent?.student?.username ?? "",
+        password: getEditStudent?.student?.password ?? "",
+        class_room: getEditStudent?.student?.class_room ?? "",
+      });
     }
-  }, [getEditStudent]);
+  }, [getEditStudent, setValues]);
 
   function handleReset() {
     SetEmpty();
