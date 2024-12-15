@@ -1,4 +1,6 @@
 import { iStudentWithScore } from "@/dummy-data";
+import { PrefixDashboard } from "@/lib/features/dashboard/prefix-instance-dashboard";
+import Link from "next/link";
 
 function GetColorByScore(score: number) {
   if (score >= 80) {
@@ -36,9 +38,15 @@ export default function CardStudent({
       <div className="flex text-sm md:text-lg">
         <span className="mr-2 font-semibold">{index + 1}.</span>
         <div className="flex flex-col">
-          <h3 className="max-w-32 truncate whitespace-nowrap md:max-w-48">
-            {data.student_name}
-          </h3>
+          <Link
+            href={PrefixDashboard(
+              "/student/" + data.student_id + "/" + data.id,
+            )}
+          >
+            <h3 className="max-w-32 truncate whitespace-nowrap text-black hover:text-gray-500 md:max-w-48">
+              {data.student_name}
+            </h3>
+          </Link>
           <p className="text-sm font-semibold text-gray-500">10 E 1</p>
         </div>
       </div>
