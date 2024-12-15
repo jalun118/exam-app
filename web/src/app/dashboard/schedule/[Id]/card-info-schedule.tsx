@@ -19,7 +19,7 @@ export default function CardInfoSchedule({
           <div className="flex w-fit divide-x divide-gray-400 rounded-lg border border-gray-400 px-3 py-3">
             <div className="mr-3">
               <Link
-                href={PrefixDashboard("/schedule/e/" + id_schedule)}
+                href={PrefixDashboard("/schedule/" + id_schedule + "/edit")}
                 className="inline-flex items-center justify-center rounded-full px-2 py-1 outline-none ring-0 ring-gray-200 transition duration-75 ease-in-out active:bg-gray-200 active:ring-4"
               >
                 <svg

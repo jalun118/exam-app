@@ -100,7 +100,7 @@ export default function TableSchedule({
                   </td>
                   <td className="flex gap-x-1 whitespace-nowrap px-2 py-4 text-end text-sm font-medium md:px-2 md:text-base">
                     <Link
-                      href={PrefixDashboard("/schedule/d/" + schedule.id)}
+                      href={PrefixDashboard("/schedule/" + schedule.id)}
                       className="inline-flex items-center justify-center rounded-full p-1 outline-none ring-0 ring-gray-200 transition duration-75 ease-in-out active:bg-gray-200 active:ring-4"
                     >
                       <svg
@@ -124,7 +124,7 @@ export default function TableSchedule({
                       </svg>
                     </Link>
                     <Link
-                      href={PrefixDashboard("/schedule/e/" + schedule.id)}
+                      href={PrefixDashboard("/schedule/" + schedule.id + "/edit")}
                       className="inline-flex items-center justify-center rounded-full p-1 outline-none ring-0 ring-gray-200 transition duration-75 ease-in-out active:bg-gray-200 active:ring-4"
                     >
                       <svg
