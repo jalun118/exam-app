@@ -444,6 +444,7 @@ export interface iStudentWithScore {
   student_name: string;
   score: number;
   created_at: string;
+  student_id: string;
 }
 
 export const StudentWithScore: iStudentWithScore[] = [
@@ -452,120 +453,140 @@ export const StudentWithScore: iStudentWithScore[] = [
     student_name: "Greer Wyatt Salas",
     score: 70.5,
     created_at: "2024-03-26T10:41:24",
+    student_id: "2c728331-f4ef-416e-a17b-0bec54761aa7",
   },
   {
     id: "5e2d87ab-5b02-432d-9fba-c5e5a16c34dc",
     student_name: "Mccarthy Ewing Larson",
     score: 61.7,
     created_at: "2024-10-18T02:08:13",
+    student_id: "26e3dd81-0406-4676-aec8-c3f44f7d5fcb",
   },
   {
     id: "4cf4d49b-8d6c-4129-bde3-75a119812478",
     student_name: "Elvia Cross Cameron",
     score: 23.7,
     created_at: "2024-07-09T03:38:13",
+    student_id: "c9e5e4d3-cef3-424e-ae5b-b86d937d210d",
   },
   {
     id: "36658dfa-7306-4e74-9fb4-326e1c13249c",
     student_name: "Louisa Knapp Kirby",
     score: 95,
     created_at: "2024-07-11T02:54:03",
+    student_id: "453cebc3-8b6f-47b5-adca-679c450c4cf9",
   },
   {
     id: "d89abe60-cc6f-457d-b901-cdb0d516b5a1",
     student_name: "Aguilar Odonnell Holt",
     score: 54.1,
     created_at: "2024-08-08T11:25:17",
+    student_id: "20b9449f-55b6-43b0-b331-9bee56883d7d",
   },
   {
     id: "8a320e2e-afd3-4c1e-a92e-3d8acf76ab49",
     student_name: "Faulkner Romero Houston",
     score: 80.5,
     created_at: "2024-04-20T04:14:12",
+    student_id: "466898db-3d7c-4284-9aa9-a5334fbf12c7",
   },
   {
     id: "81268de7-93ab-4a0a-bda1-c3b705a4d339",
     student_name: "Pennington Hayes Kline",
     score: 79.8,
     created_at: "2024-08-13T09:14:18",
+    student_id: "8eba3d0b-eee9-4b77-bce2-c874af9b9402",
   },
   {
     id: "78ec7842-ed7e-4136-999d-00458e329436",
     student_name: "Shelia Patterson Gilmore",
     score: 48.2,
     created_at: "2024-03-27T05:44:35",
+    student_id: "47b84b6a-e13b-4daa-b8c0-898ee3d12ad0",
   },
   {
     id: "92657ea7-ed83-4f28-8be3-e8935ce4dc27",
     student_name: "Mckay Zimmerman Hardy",
     score: 74.7,
     created_at: "2024-12-04T06:03:29",
+    student_id: "d0b13b82-3660-4889-b8c2-0a1a306ce765",
   },
   {
     id: "a0f6f9a6-81cb-4ffb-b312-4b8031918a87",
     student_name: "Bell Raymond Sharp",
     score: 58.4,
     created_at: "2024-09-27T01:24:55",
+    student_id: "39ec6851-2a65-4ddc-baba-ed0f2256065f",
   },
   {
     id: "b8134172-b310-4d41-b079-2c3a1fc47ce5",
     student_name: "Aurelia Yates Mathews",
     score: 59.7,
     created_at: "2024-09-01T07:12:33",
+    student_id: "bd7a10e9-4c49-43f3-8120-bb1151d9be90",
   },
   {
     id: "5caf091b-7213-487c-8d51-e4cd1b98182a",
     student_name: "Tamra Rodriguez Mcmillan",
     score: 27.8,
     created_at: "2024-02-10T08:38:08",
+    student_id: "8ffc015e-1bb3-429a-95c8-57580afb9c18",
   },
   {
     id: "a540a4d3-0cfa-46b6-aae8-768054113237",
     student_name: "Martin Whitfield Oconnor",
     score: 90.7,
     created_at: "2024-01-17T11:23:58",
+    student_id: "cd693b8a-6251-4dc3-b780-88aece156fb5",
   },
   {
     id: "70cfba04-ee8a-40eb-a120-0e08c0542516",
     student_name: "Benita Beasley Porter",
     score: 77.3,
     created_at: "2024-10-29T03:51:04",
+    student_id: "d002b111-358f-41fa-9279-225dc7156944",
   },
   {
     id: "e0877c42-f1fa-483c-82a2-5e8abc38a0d3",
     student_name: "Conner Morgan Talley",
     score: 63.1,
     created_at: "2024-05-13T08:04:40",
+    student_id: "25b3427c-6fac-41a7-aa0d-d2821f4ddf63",
   },
   {
     id: "9da948f5-79ba-4bc5-92f0-ef816dd08d2d",
     student_name: "Branch Fields Berg",
     score: 76.1,
     created_at: "2024-06-29T10:04:09",
+    student_id: "d1eb2a73-6603-4b7b-b07d-37d7d2b103a7",
   },
   {
     id: "b651f21e-2411-4b3d-9cd9-2c67adc29336",
     student_name: "Vargas Harper Guthrie",
     score: 71.9,
     created_at: "2024-08-04T04:34:19",
+    student_id: "a8cfb4b5-402a-4f53-9bc2-466f68f908df",
   },
   {
     id: "7d3d9b7e-bec2-42c2-bae9-34ddde021946",
     student_name: "Sharpe Emerson Brady",
     score: 45.6,
     created_at: "2024-10-21T04:22:29",
+    student_id: "3513acf8-55ef-46b7-b194-5e8530d993f8",
   },
   {
     id: "1b1e6756-da1d-4c3a-a468-a26ce2a0367a",
     student_name: "Lilly Contreras Nguyen",
     score: 70.2,
     created_at: "2024-08-09T08:33:56",
+    student_id: "2f70e831-99f0-45ed-bc25-b49a60935330",
   },
   {
     id: "ff94fc59-78e7-4e89-8070-c06641c24a23",
     student_name: "Brooke Osborn Luna",
     score: 66.2,
     created_at: "2024-01-16T12:03:42",
+    student_id: "a9b4c9a8-01a6-477e-a4fc-60e370c93cc2",
   },
 ];
 
