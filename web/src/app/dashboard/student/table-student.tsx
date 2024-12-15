@@ -101,7 +101,8 @@ export default function TableStudent() {
                   <td className="flex justify-end gap-x-1 whitespace-nowrap px-2 py-2.5 text-end text-sm font-medium md:px-2 md:text-base">
                     <Link
                       href={PrefixDashboard("/student/" + student.id + "")}
-                      className="inline-flex items-center justify-center rounded-full p-1 outline-none ring-0 ring-gray-200 transition duration-75 ease-in-out active:bg-gray-200 active:ring-4">
+                      className="inline-flex items-center justify-center rounded-full p-1 outline-none ring-0 ring-gray-200 transition duration-75 ease-in-out active:bg-gray-200 active:ring-4"
+                    >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
