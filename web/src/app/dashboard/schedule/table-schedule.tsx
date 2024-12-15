@@ -124,7 +124,9 @@ export default function TableSchedule({
                       </svg>
                     </Link>
                     <Link
-                      href={PrefixDashboard("/schedule/" + schedule.id + "/edit")}
+                      href={PrefixDashboard(
+                        "/schedule/" + schedule.id + "/edit",
+                      )}
                       className="inline-flex items-center justify-center rounded-full p-1 outline-none ring-0 ring-gray-200 transition duration-75 ease-in-out active:bg-gray-200 active:ring-4"
                     >
                       <svg
